@@ -1,0 +1,84 @@
+<div class="flex justify-center items-center h-screen flex-col">
+  {{#if message}}
+  <div
+    class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded text-center mb-4"
+    style="max-width: 900px;"
+    role="alert"
+  >
+    <span class="block sm:inline">{{message}}</span>
+  </div>
+  {{/if}}
+  <form
+    class="bg-white p-6 rounded-lg shadow-md"
+    style="width: 900px;"
+    action="/add-book"
+    method="post"
+  >
+    <h3 class="text-center text-xl font-semibold mb-6">Add</h3>
+
+    <div class="mb-4">
+      <label for="nom" class="block text-gray-700 font-medium mb-2">Titre:</label>
+      <input
+        type="text"
+        id="titre"
+        name="titre"
+        class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-300 focus:outline-none"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label for="numero" class="block text-gray-700 font-medium mb-2">Auteur:</label>
+      <input
+        type="text"
+        id="auteur"
+        name="auteur"
+        class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-300 focus:outline-none"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label for="role" class="block text-gray-700 font-medium mb-2">Categorie:</label>
+      <select
+        id="categorie"
+        name="categorie"
+        class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-300 focus:outline-none"
+        required
+      >
+        <option value="Informatique">Informatique</option>
+        <option value="Electrique">Electrique</option>
+        <option value="Mecanique">Mecanique</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label for="photo" class="block text-gray-700 font-medium mb-2">Nombre De Pages:</label>
+      <input
+        type="text"
+        id="pages"
+        name="pages"
+        class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-300 focus:outline-none"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label for="photo" class="block text-gray-700 font-medium mb-2">Photo:</label>
+      <input
+        type="text"
+        id="photo"
+        name="photo"
+        class="w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-300 focus:outline-none"
+        required
+      />
+    </div>
+
+    <button
+      type="submit"
+      class="bg-blue-500 text-white font-medium py-2 px-4 rounded-lg w-full hover:bg-blue-600 focus:ring focus:ring-blue-300 focus:outline-none mt-4"
+    >
+      Add
+    </button>
+  </form>
+</div>
